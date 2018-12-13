@@ -1,0 +1,21 @@
+{
+  "name": "aleyn.cn",
+  "version": "1.0.0",
+  "description": "The official documentation site for Aleyn.js",
+  "main": "index.js",
+  "author": "aleynjs@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev:www": "vuepress dev www/@",
+    "build:www": "vuepress build www/@",
+    "dev:blog": "vuepress dev www/blog",
+    "build:blog": "vuepress build www/blog",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "vuepress": "^v1.0.0-alpha.28"
+  }
+}
