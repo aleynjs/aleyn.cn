@@ -2,7 +2,7 @@
  * 基本配置
  */
 module.exports = {
-  base: './', // 部署站点的基础路径
+  base: process.env.NODE_ENV === 'production' ? './' : '/', // 部署站点的基础路径
   title: 'Aleyn He\'s Personal Website',
   description: 'The official documentation site for Aleyn.js',
   host: '127.0.0.1',

@@ -6,16 +6,18 @@
   "author": "aleynjs@gmail.com",
   "license": "MIT",
   "scripts": {
-    "dev:www": "vuepress dev www/@",
-    "build:www": "vuepress build www/@",
-    "dev:blog": "vuepress dev www/blog",
-    "build:blog": "vuepress build www/blog",
+    "dev": "vuepress dev www/@",
+    "build": "cross-env NODE_ENV=production && vuepress build www/@",
+    "deploy": "npm run build && echo aleyn.cn>>www/@/.vuepress/dist/CNAME && gh-pages -d www/@/.vuepress/dist --remote github && rimraf www/@/.vuepress/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "devDependencies": {
-    "vuepress": "^v1.0.0-alpha.28"
+    "vuepress": "^v1.0.0-alpha.28",
+    "cross-env": "^3.2.4",
+    "rimraf": "^2.6.2",
+    "gh-pages": "^2.0.1"
   }
 }
