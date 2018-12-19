@@ -18,7 +18,7 @@ module.exports = {
       {
         text: '笔记',
         items: [
-          { text: '工具', link: '/note/devtools/' },
+          { text: '工具', link: '/note/devtools/gh-pages' },
           { text: '前端', link: '/note/fe/' },
           { text: '后端', link: '/note/be/' }
         ]
@@ -27,8 +27,7 @@ module.exports = {
     sidebar: 'auto',
     search: true,
     searchMaxSuggestions: 10,
-    lastUpdated: 'Last Updated', // string | boolean
-    // 假定是 GitHub.
+    lastUpdated: 'Last Updated',
     repo: 'aleynjs/aleyn.cn'
   },
   markdown: {

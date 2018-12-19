@@ -1,6 +1,12 @@
-# GitHub Pages 部署
 
-## Scripts 命令行部署
+# Pages 部署
+
+GitHub Pages、GitLab Pages、Coding Pages
+
+
+## GitHub Pages 部署
+
+### Scripts 命令行部署
 
 说明： 将dist目录推送至远程origin库的gh-pages分支，也可是其它远程库（如：github），script属性下配置下述deploy命令，其中：
 
@@ -18,7 +24,7 @@
 }
 ```
 
-## deploy.sh 部署
+### deploy.sh 部署
 
 在项目内部，创建具有以下内容的deploy.sh（对突出显示的行进行适当注释），并运行它进行部署：
 
@@ -52,3 +58,30 @@ git push -f https://github.com/aleynjs/aleyn.cn.git master:gh-pages
 
 cd -
 ```
+
+## GitLab Pages 部署
+
+1. 项目根目录创建要部署的文件夹：public
+
+> 如果你打算发布到 https://< USERNAME or GROUP>.gitlab.io/
+>
+> 如果你打算发布到 https://< USERNAME or GROUP>.gitlab.io/< REPO >/（也就是说你的仓库在 https://gitlab.com/< USERNAME >/< REPO >）
+
+2. 在你项目的根目录下创建一个名为 .gitlab-ci.yml 的文件，无论何时你提交了更改，它都会帮助你自动构建和部署：
+
+``` yaml
+image: node:9.11.1
+pages:
+ cache:
+   paths:
+   - node_modules/
+ script:
+ - npm install
+ - npm run build
+ artifacts:
+   paths:
+   - public
+ only:
+ - master
+```
+3. 相比于GitHub Pages服务，个人感觉比较慢
