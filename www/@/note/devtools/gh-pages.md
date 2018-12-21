@@ -6,6 +6,8 @@ GitHub Pages、GitLab Pages、Coding Pages
 
 ## GitHub Pages 部署
 
+GitHub Pages 默认开启gzip。
+
 ### Scripts 命令行部署
 
 说明： 将dist目录推送至远程origin库的gh-pages分支，也可是其它远程库（如：github），script属性下配置下述deploy命令，其中：
@@ -59,13 +61,15 @@ git push -f https://github.com/aleynjs/aleyn.cn.git master:gh-pages
 cd -
 ```
 
-## GitLab Pages 部署
+## GitLab Pages and GitLab CI 部署
+
+GitLab Pages 默认未开启gzip。
 
 1. 项目根目录创建要部署的文件夹：public
 
-> 如果你打算发布到 https://< USERNAME or GROUP>.gitlab.io/
->
-> 如果你打算发布到 https://< USERNAME or GROUP>.gitlab.io/< REPO >/（也就是说你的仓库在 https://gitlab.com/< USERNAME >/< REPO >）
+- 如果你打算发布到 https://< USERNAME or GROUP>.gitlab.io/
+
+- 如果你打算发布到 https://< USERNAME or GROUP>.gitlab.io/< REPO >/（也就是说你的仓库在 https://gitlab.com/< USERNAME >/< REPO >）
 
 2. 在你项目的根目录下创建一个名为 .gitlab-ci.yml 的文件，无论何时你提交了更改，它都会帮助你自动构建和部署：
 
@@ -84,4 +88,16 @@ pages:
  only:
  - master
 ```
-3. 相比于GitHub Pages服务，个人感觉比较慢
+3. 开启gzip，.gitlab-ci.yml 文件 script 命令下配置，未验证成功[gitlab.com pages](https://gitlab.com/gitlab-org/gitlab-pages/issues/12)
+
+
+## Netlify 部署
+
+Netlify 默认开启gzip。
+
+1. 在 Netlify 中, 创建一个新的 Github/GitLab 项目，使用以下设置：
+
+- Build Command: npm run XXX 或者 yarn XXX 或者 不填
+- Publish directory: public 或者 dist
+
+2. 点击部署按钮即可！
