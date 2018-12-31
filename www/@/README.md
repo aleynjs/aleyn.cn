@@ -12,5 +12,5 @@ features:
   details: 记录日常工作中遇到的常见问题，以及解决方法。
 - title: 学习笔记
   details: 记录日常工作中遇到的常见问题，以及解决方法。
-footer: MIT Licensed | Copyright © 2018 aleynjs
+footer: MIT Licensed | Copyright © 2018-present Lin (Aleyn) He
 ---
