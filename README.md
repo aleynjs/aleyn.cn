@@ -3,11 +3,11 @@
   <a href="https://github.com/vuejs/vuepress">
     <img src="https://img.shields.io/badge/vuepress-1.0.0-brightgreen.svg" alt="vuepress">
   </a>
+  <a href="https://github.com/aleynjs/aleyn.cn">
+    <img src="https://img.shields.io/badge/tag-1.0.0-orange.svg" alt="tag">
+  </a>
   <a href="https://github.com/aleynjs/aleyn.cn/blob/dev/LICENSE">
     <img src="https://img.shields.io/github/license/aleynjs/aleyn.cn.svg" alt="license">
-  </a>
-  <a href="https://github.com/aleynjs/aleyn.cn">
-    <img src="https://img.shields.io/github/downloads/aleynjs/aleyn.cn/total.svg" alt="GitHub downloads">
   </a>
   <a href="https://github.com/aleynjs/aleyn.cn">
     <img src="https://img.shields.io/github/contributors/aleynjs/aleyn.cn.svg" alt="GitHub contributors">
